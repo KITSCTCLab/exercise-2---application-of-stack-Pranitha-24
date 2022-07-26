@@ -11,7 +11,9 @@ class Evaluate:
   def __init__(self, size):
     """Inits Evaluate with top, size_of_stack and stack.
     Arguments:
-      size_of_stack: An integer to set the size of stack.
+      top:An integer which points to the top most element in the stack.
+      size_of_stack: An integer which represents size of stack.
+      stack: A list which maintians the elements of stack.
     """
     self.top = -1
     self.size_of_stack = size
@@ -24,11 +26,11 @@ class Evaluate:
     Returns:
       True if it is empty, else returns False.
     """
-      # Write your code here
-      if self.top == -1:
-        return True
-      else:
-        return False
+    # Write your code here
+    if self.top == -1:
+      return True
+    else:
+      return False
 
 
   def pop(self):
@@ -105,7 +107,6 @@ class Evaluate:
           stack[-2] = stack[-2] ^ stack[-1]
           stack.pop()
     return int(stack[-1])
-
 
 # Do not change the following code
 postfix_expression = input()  # Read postfix expression
